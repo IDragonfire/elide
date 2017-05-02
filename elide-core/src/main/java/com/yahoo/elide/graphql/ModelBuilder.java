@@ -38,6 +38,10 @@ import static graphql.schema.GraphQLObjectType.newObject;
  * Constructs a GraphQL schema (query and mutation documents) from an Elide EntityDictionary.
  */
 public class ModelBuilder {
+    public static final String FILTER_ARGUMENT = "filter";
+    public static final String SORT_ARGUMENT = "sort";
+    public static final String PAGE_FIRST_ARGUMENT = "first";
+    public static final String PAGE_OFFSET_ARGUMENT = "offset";
     private EntityDictionary dictionary;
     private DataFetcher dataFetcher;
     private GraphQLArgument relationshipOpArg;
@@ -73,22 +77,22 @@ public class ModelBuilder {
                 .build();
 
         filterArgument = GraphQLArgument.newArgument()
-                .name("filter")
+                .name(FILTER_ARGUMENT)
                 .type(Scalars.GraphQLString)
                 .build();
 
         sortArgument = GraphQLArgument.newArgument()
-                .name("sort")
+                .name(SORT_ARGUMENT)
                 .type(Scalars.GraphQLString)
                 .build();
 
         pageFirstArgument = GraphQLArgument.newArgument()
-                .name("first")
+                .name(PAGE_FIRST_ARGUMENT)
                 .type(Scalars.GraphQLString)
                 .build();
 
         pageOffsetArgument = GraphQLArgument.newArgument()
-                .name("offset")
+                .name(PAGE_OFFSET_ARGUMENT)
                 .type(Scalars.GraphQLString)
                 .build();
 
