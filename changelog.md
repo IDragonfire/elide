@@ -1,8 +1,14 @@
 #Change Log
 
 ## 3.0.7
+**Features**
+ * Implement functionality for Hibernate5 to support `EntityManager`'s.
+
+**Fixes**
+ * Rethrow `WebApplicationException` exceptions from error response handler.
+
 **Misc**
-Always setting HQL 'alias' in FilterPredicate Constructor
+ * Always setting HQL 'alias' in FilterPredicate Constructor
 
 ## 3.0.6
 **Misc**
