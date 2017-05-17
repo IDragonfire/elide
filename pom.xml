@@ -4,7 +4,8 @@
   ~ See LICENSE file in project root for terms.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.yahoo.elide</groupId>
     <artifactId>elide-parent-pom</artifactId>
@@ -63,6 +64,7 @@
     </prerequisites>
 
     <properties>
+        <maven.test.skip>true</maven.test.skip>
         <autoVersionSubmodules>true</autoVersionSubmodules>
         <min.jdk.version>1.8</min.jdk.version>
         <max.jdk.version>1.10</max.jdk.version>
@@ -79,7 +81,8 @@
         <!-- TODO: Need to update locations to be relative to the projects using them -->
         <parent.pom.dir>${project.basedir}/..</parent.pom.dir>
         <checkstyle.config.location>${parent.pom.dir}/checkstyle-style.xml</checkstyle.config.location>
-        <checkstyle.suppressions.location>${parent.pom.dir}/checkstyle-suppressions.xml</checkstyle.suppressions.location>
+        <checkstyle.suppressions.location>${parent.pom.dir}/checkstyle-suppressions.xml
+        </checkstyle.suppressions.location>
 
         <dependency.locations.enabled>false</dependency.locations.enabled>
     </properties>
